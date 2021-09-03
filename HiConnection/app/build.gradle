@@ -1,0 +1,67 @@
+/*
+ * Copyright 2020. Explore in HMS. All rights reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
+plugins {
+    id "org.sonarqube" version "3.0"
+}
+apply plugin: 'com.android.application'
+apply plugin: 'com.huawei.agconnect'
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "com.hms.wireless.hiconnection"
+        property "sonar.projectName", "HiConnection"
+        property "sonar.login", "1dc7a33eb001c2f2fb78b2eabb4efa89ec81bfe5"
+        property "sonar.host.url", "http://10.216.72.212:9000"
+        property "sonar.projectVersion", android.defaultConfig.versionName
+    }
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.hms.wireless.hiconnection"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+
+    implementation 'com.huawei.hms:wireless:5.0.3.302'
+    implementation 'com.huawei.hms:location:5.0.4.300'
+    implementation 'com.huawei.hms:maps:5.0.3.302'
+    implementation "com.huawei.hms:videokit-player:1.0.1.300"
+}

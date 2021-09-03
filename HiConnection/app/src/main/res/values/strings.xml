@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2020. Explore in HMS. All rights reserved.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<resources>
+    <string name="app_name">WirelessKit-Codelab</string>
+
+    <!-- PlayActivity Strings -->
+    <string name="poor_quality_url">https://github.com/alihan98ersoy/Videos/blob/master/360p.mp4?raw=true</string>
+    <string name="normal_quality_url">https://github.com/alihan98ersoy/Videos/blob/master/480p.mp4?raw=true</string>
+    <string name="good_quality_url">https://github.com/alihan98ersoy/Videos/blob/master/720p.mp4?raw=true</string>
+    <string name="high_quality_url">https://github.com/alihan98ersoy/Videos/blob/master/1080p.mp4?raw=true</string>
+
+    <string name="poor_quality_description">The downlink bandwidth: %1$s \nVideo quality: PoorQuality</string>
+    <string name="normal_quality_description">The downlink bandwidth: %1$s \nVideo quality: NormalQuality</string>
+    <string name="good_quality_description">The downlink bandwidth: %1$s \nVideo quality: GoodQuality</string>
+    <string name="high_quality_description">The downlink bandwidth: %1$s \nVideo quality: HighQuality</string>
+</resources>
